@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "gestion_procesos_urbanizacion",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "San Fernando Oeste" }, "geometry": { "type": "Point", "coordinates": [ -58.60017245, -34.47174641 ] } },
+{ "type": "Feature", "properties": { "Name": "Santa Rosa" }, "geometry": { "type": "Point", "coordinates": [ -58.55207311, -34.45981615 ] } },
+{ "type": "Feature", "properties": { "Name": "Gardel | Pte. Sarmiento" }, "geometry": { "type": "Point", "coordinates": [ -58.57802667, -34.62495494 ] } },
+{ "type": "Feature", "properties": { "Name": "San Ignacio" }, "geometry": { "type": "Point", "coordinates": [ -58.50213056, -34.82108679 ] } },
+{ "type": "Feature", "properties": { "Name": "La Carbonilla" }, "geometry": { "type": "Point", "coordinates": [ -58.46951218, -34.59837605 ] } },
+{ "type": "Feature", "properties": { "Name": "Los Pinos" }, "geometry": { "type": "Point", "coordinates": [ -58.45092314, -34.65672751 ] } }
+]
+}

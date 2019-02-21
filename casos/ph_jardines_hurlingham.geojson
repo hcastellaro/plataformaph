@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "ph_jardines_hurlingham",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Jardin de Infantes N° 2 Sendero de Luna", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.6449889, -34.6025093, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Jardín Maternal N° 5 Rayito de Sol", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.650046, -34.6204972, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Jardín de Infantes N° 918", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.6638218, -34.5883331, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Jardín de Infantes N° 919", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.6518431, -34.5714303, 0.0 ] } }
+]
+}

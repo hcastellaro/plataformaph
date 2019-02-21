@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "ph_ctep",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "PF Campana | 104 Viviendas", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.9496679, -34.19447887 ] } },
+{ "type": "Feature", "properties": { "Name": "PF San Martín | 200 Viveindas", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.58639032, -34.51719041 ] } },
+{ "type": "Feature", "properties": { "Name": "PF Villanueva | 200 Viviendas", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.77368976, -34.57880032 ] } },
+{ "type": "Feature", "properties": { "Name": "PF Moreno | 246 Viviendas", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.79816567, -34.61400703 ] } },
+{ "type": "Feature", "properties": { "Name": "PF Escobar | 122 Viviendas", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.78055686, -34.39377074 ] } }
+]
+}

@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "ph_coopteba",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Coopteba SM\/3F | 18 Viviendas", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.56163646, -34.56023588 ] } },
+{ "type": "Feature", "properties": { "Name": "Coopteba SM\/3F | 6 Viviendas Transitorias", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.5546969, -34.58896558 ] } },
+{ "type": "Feature", "properties": { "Name": "Coopteba VL | 11 Viviendas", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.55956136, -34.44599304 ] } }
+]
+}

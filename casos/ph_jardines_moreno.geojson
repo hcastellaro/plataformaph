@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "ph_jardines_moreno",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "CTA | Jardin N° 906", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.85617442, -34.63516254, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CTA | Jardin N° 926", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.8258534, -34.63682949, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CTA | Jardin N° 955", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.81515154, -34.53883356, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CTA | Jardin N° 930", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.79052582, -34.6093677, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CTA | Jardin N° 918", "description": null }, "geometry": { "type": "Point", "coordinates": [ -58.76236642, -34.59968473, 0.0 ] } }
+]
+}
