@@ -90,7 +90,7 @@
 		pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {icon: icono1});
 		}
-	});
+	}).addTo(map);
 
 
 	var gestion_procesos_urbanizacion = L.geoJSON(capa_gestion_procesos_urbanizacion, {
@@ -125,7 +125,7 @@
 	pointToLayer: function (feature, latlng) {
 		return L.marker(latlng, {icon: icono2});
 	}
-	});
+	}).addTo(map);
 
 
 	var ph_coopteba = L.geoJSON(capa_ph_coopteba, {
@@ -233,7 +233,7 @@
 			fillOpacity: 1
 		});
 	}
-	});	
+	}).addTo(map);
 
 
 	var ph_proyectos_obras = L.geoJSON(capa_ph_proyectos_obras, {
@@ -254,7 +254,7 @@
 			fillOpacity: 1
 		});
 	}
-	});	
+	}).addTo(map);
 
 	var baseLayers = {
 		"Satelital": satellite,
