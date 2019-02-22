@@ -41,45 +41,223 @@
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
-	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
+	var satellite  = L.tileLayer(mbUrl, {id: 'mapbox.satellite',   attribution: mbAttr});
+		grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
 		streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
+
+
 
 	var map = L.map('map', {
 		center: [-34.630, -58.438],
 		zoom: 10,
-		layers: [grayscale]
+		layers: [satellite]
 	});
 
-	var consultorios = L.geoJSON().addTo(map);
-	consultorios.addData(capa_consultorios);
 
-	var gestion_procesos_urbanizacion = L.geoJSON().addTo(map);
-	gestion_procesos_urbanizacion.addData(capa_gestion_procesos_urbanizacion);
+	var icono1 = L.icon({
+		iconUrl: './images/icono1.png',
+		iconSize: [23, 23],
+		iconAnchor: [16, 37],
+		popupAnchor: [0, -28]
+	});
 
-	var ph_casos_estudio = L.geoJSON().addTo(map);
-	ph_casos_estudio.addData(capa_ph_casos_estudio);
-
-	var ph_coopteba = L.geoJSON().addTo(map);
-	ph_coopteba.addData(capa_ph_coopteba);
-
-	var ph_cetep = L.geoJSON().addTo(map);
-	ph_cetep.addData(capa_ph_cetep);
-
-	var jardines_hurlingham = L.geoJSON().addTo(map);
-	jardines_hurlingham.addData(capa_jardines_hurlingham);
-
-	var jardines_moreno = L.geoJSON().addTo(map);
-	jardines_moreno.addData(capa_jardines_moreno);
-
-	var ph_proyectos = L.geoJSON().addTo(map);
-	ph_proyectos.addData(capa_ph_proyectos);
-
-	var ph_proyectos_obras = L.geoJSON().addTo(map);
-	ph_proyectos_obras.addData(capa_ph_proyectos_obras);
+	var icono2 = L.icon({
+		iconUrl: './images/icono2.png',
+		iconSize: [23, 23],
+		iconAnchor: [16, 37],
+		popupAnchor: [0, -28]
+	});
 
 
+	function onEachFeature(feature, layer) {
+		
+		// does this feature have a property named popupContent?
+		if (feature.properties && feature.properties.Name) {
+			layer.bindPopup(feature.properties.Name);
+		}
+	};
+
+
+
+	var consultorios = L.geoJSON(capa_consultorios, {
+
+		style: function (feature) {
+			return feature.properties && feature.properties.style;
+		},
+
+		onEachFeature: onEachFeature,
+
+		pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {icon: icono1});
+		}
+	});
+
+
+	var gestion_procesos_urbanizacion = L.geoJSON(capa_gestion_procesos_urbanizacion, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.circleMarker(latlng, {
+			radius: 8,
+			fillColor: "#ff7800",
+			color: "#000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 0.8
+		});
+	}
+	});
+
+
+	var ph_casos_estudio = L.geoJSON(capa_ph_casos_estudio, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.marker(latlng, {icon: icono2});
+	}
+	});
+
+
+	var ph_coopteba = L.geoJSON(capa_ph_coopteba, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.circleMarker(latlng, {
+			radius: 8,
+			fillColor: "#ff7800",
+			color: "#000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 0.8
+		});
+	}
+	});
+
+	var ph_cetep = L.geoJSON(capa_ph_cetep, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.circleMarker(latlng, {
+			radius: 8,
+			fillColor: "#ff7800",
+			color: "#000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 0.8
+		});
+	}
+	});
+
+
+
+	var jardines_hurlingham = L.geoJSON(capa_jardines_hurlingham, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.circleMarker(latlng, {
+			radius: 8,
+			fillColor: "#ff7800",
+			color: "#000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 0.8
+		});
+	}
+	});
+
+
+
+	var jardines_moreno = L.geoJSON(capa_jardines_moreno, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.circleMarker(latlng, {
+			radius: 8,
+			fillColor: "#ff7800",
+			color: "#000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 0.8
+		});
+	}
+	});
+
+
+
+
+	var ph_proyectos = L.geoJSON(capa_ph_proyectos, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.circleMarker(latlng, {
+			radius: 6,
+			fillColor: "#f4ee42",
+			color: "#000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 1
+		});
+	}
+	});	
+
+
+	var ph_proyectos_obras = L.geoJSON(capa_ph_proyectos_obras, {
+
+	style: function (feature) {
+		return feature.properties && feature.properties.style;
+	},
+
+	onEachFeature: onEachFeature,
+
+	pointToLayer: function (feature, latlng) {
+		return L.circleMarker(latlng, {
+			radius: 6,
+			fillColor: "#f44141",
+			color: "#000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 1
+		});
+	}
+	});	
 
 	var baseLayers = {
+		"Satelital": satellite,
 		"Grayscale": grayscale,
 		"Streets": streets
 	};

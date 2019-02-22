@@ -3,11 +3,11 @@ var capa_consultorios = {
     "name": "consultorios",
     "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
     "features": [
-    { "type": "Feature", "properties": { "Name": "Los Milagros" }, "geometry": { "type": "Point", "coordinates": [ -58.64520929, -34.61901633 ] } },
-    { "type": "Feature", "properties": { "Name": "Patagones" }, "geometry": { "type": "Point", "coordinates": [ -58.63046198, -34.68232016 ] } },
-    { "type": "Feature", "properties": { "Name": "Santa Rosa" }, "geometry": { "type": "Point", "coordinates": [ -58.55207311, -34.45981615 ] } },
-    { "type": "Feature", "properties": { "Name": "Un Techo Para Todos" }, "geometry": { "type": "Point", "coordinates": [ -58.55756269, -34.72385811 ] } },
-    { "type": "Feature", "properties": { "Name": "Maria Elena" }, "geometry": { "type": "Point", "coordinates": [ -58.61794788, -34.73735697 ] } }
+    { "type": "Feature", "properties": { "Name": "Los Milagros", "popupContent": "This is where the Rockies play!" }, "geometry": { "type": "Point", "coordinates": [ -58.64520929, -34.61901633 ] } },
+    { "type": "Feature", "properties": { "Name": "Patagones", "popupContent": "This is where the Rockies play!" }, "geometry": { "type": "Point", "coordinates": [ -58.63046198, -34.68232016 ] } },
+    { "type": "Feature", "properties": { "Name": "Santa Rosa", "popupContent": "This is where the Rockies play!" }, "geometry": { "type": "Point", "coordinates": [ -58.55207311, -34.45981615 ] } },
+    { "type": "Feature", "properties": { "Name": "Un Techo Para Todos", "popupContent": "This is where the Rockies play!" }, "geometry": { "type": "Point", "coordinates": [ -58.55756269, -34.72385811 ] } },
+    { "type": "Feature", "properties": { "Name": "Maria Elena", "popupContent": "This is where the Rockies play!" }, "geometry": { "type": "Point", "coordinates": [ -58.61794788, -34.73735697 ] } }
     ]
     };
 
